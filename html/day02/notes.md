@@ -1,5 +1,17 @@
 # Day 02 - HTML Basics
 
+## Topics Covered
+- Types of Content
+- Main HTML Tags
+- Target Attribute
+- Lists
+- Attributes
+- Media Elements
+- Local and CDN Resources
+
+## Purpose
+Learning the basic structure and elements of HTML.
+
 ---
 
 # 1. HTML
@@ -19,7 +31,7 @@ HTML defines:
 - Forms
 - Layout structure
 
-HTML is not a programming language.
+HTML is not a programming language.  
 It is a markup language.
 
 ---
@@ -34,17 +46,17 @@ HTML content is mainly divided into two categories.
 
 Used to display text information.
 
-Examples:
+### Examples
 - Headings
 - Paragraphs
 - Links
 - Lists
 
-Tags:
-- <h1> to <h6>
-- <p>
-- <a>
-- <li>
+### Tags
+- `<h1>` to `<h6>`
+- `<p>`
+- `<a>`
+- `<li>`
 
 ---
 
@@ -52,15 +64,15 @@ Tags:
 
 Used to display media files.
 
-Examples:
+### Examples
 - Images
 - Audio
 - Video
 
-Tags:
-- <img>
-- <audio>
-- <video>
+### Tags
+- `<img>`
+- `<audio>`
+- `<video>`
 
 ---
 
@@ -68,7 +80,7 @@ Tags:
 
 ---
 
-## <!DOCTYPE html>
+## `<!DOCTYPE html>`
 
 Defines the document type.
 
@@ -76,7 +88,7 @@ Tells browser that the document uses HTML5.
 
 ---
 
-## <html>
+## `<html>`
 
 Root element of HTML document.
 
@@ -84,7 +96,7 @@ All HTML code is written inside this tag.
 
 ---
 
-## <head>
+## `<head>`
 
 Contains:
 - Title
@@ -96,13 +108,13 @@ This data is not directly visible on webpage.
 
 ---
 
-## <title>
+## `<title>`
 
 Defines webpage title shown in browser tab.
 
 ---
 
-## <body>
+## `<body>`
 
 Contains visible webpage content.
 
@@ -110,22 +122,22 @@ Contains visible webpage content.
 
 ## Headings
 
-<h1> to <h6>
+`<h1>` to `<h6>`
 
 Used for titles and subtitles.
 
-<h1> is largest.
-<h6> is smallest.
+`<h1>` is largest.  
+`<h6>` is smallest.
 
 ---
 
-## <p>
+## `<p>`
 
 Defines paragraph.
 
 ---
 
-## <a>
+## `<a>`
 
 Anchor tag.
 
@@ -133,19 +145,19 @@ Used to create hyperlinks.
 
 ---
 
-## <img>
+## `<img>`
 
 Used to display images.
 
 ---
 
-## <video>
+## `<video>`
 
 Used to display videos.
 
 ---
 
-## <audio>
+## `<audio>`
 
 Used to play audio.
 
@@ -155,28 +167,33 @@ Used to play audio.
 
 ## Definition
 
-The target attribute specifies where the linked document should open.
+The `target` attribute specifies where the linked document should open.
 
-Used mainly inside <a> tag.
+Used mainly inside `<a>` tag.
 
 ---
 
 ## Types
 
-### _self
+### `_self`
 
 Opens in same tab.
 
 (Default behavior)
 
-### _blank
+---
+
+### `_blank`
 
 Opens in new tab.
 
-Example:
+### Example
+
+```html
 <a href="https://google.com" target="_blank">
-Google
+    Google
 </a>
+```
 
 ---
 
@@ -190,10 +207,11 @@ Lists are used to organize items.
 
 Uses numbers.
 
-Tag:
-<ol>
+### Tag
+`<ol>`
 
-Example:
+### Example
+
 1. Apple
 2. Mango
 
@@ -203,10 +221,11 @@ Example:
 
 Uses bullet points.
 
-Tag:
-<ul>
+### Tag
+`<ul>`
 
-Example:
+### Example
+
 - Apple
 - Mango
 
@@ -214,10 +233,10 @@ Example:
 
 ## c. List Item
 
-Tag:
-<li>
+### Tag
+`<li>`
 
-Used inside ol or ul.
+Used inside ordered or unordered lists.
 
 ---
 
@@ -229,39 +248,41 @@ Attributes provide additional information to HTML elements.
 
 Attributes are written inside opening tag.
 
-Syntax:
+### Syntax
 
+```html
 <tag attribute="value">
+```
 
 ---
 
 ## Common Attributes
 
-### href
+### `href`
 
 Specifies link destination.
 
-### src
+### `src`
 
 Specifies source file.
 
-### alt
+### `alt`
 
 Alternative text for image.
 
-### width and height
+### `width` and `height`
 
 Define dimensions.
 
-### target
+### `target`
 
 Defines opening location.
 
-### class
+### `class`
 
 Used for CSS styling.
 
-### id
+### `id`
 
 Unique identifier for element.
 
@@ -277,15 +298,21 @@ Media elements are used to display multimedia content.
 
 Files stored inside project folder.
 
-Example:
-<img src="images/photo.jpg">
+### Example
 
-Folder Structure:
+```html
+<img src="images/photo.jpg">
+```
+
+### Folder Structure
+
+```txt
 project/
 │
 ├── index.html
 └── images/
     └── photo.jpg
+```
 
 ---
 
@@ -295,10 +322,13 @@ Files loaded from internet links.
 
 CDN stands for Content Delivery Network.
 
-Example:
-<img src="https://example.com/image.jpg">
+### Example
 
-Advantages:
+```html
+<img src="https://example.com/image.jpg">
+```
+
+### Advantages
 - Faster loading
 - No local storage needed
 - Easy to use
