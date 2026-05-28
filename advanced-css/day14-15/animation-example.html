@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Animation Example</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+
+        .slide-in{
+            animation:slide-in 1s ease;
+        }
+
+        @keyframes slide-in{
+
+            from{
+                transform:translateX(-200px);
+                opacity:0;
+            }
+
+            to{
+                transform:translateX(0);
+                opacity:1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body class="h-screen flex justify-center items-center bg-gray-100">
+
+    <div class="slide-in bg-blue-500 text-white p-10 rounded-xl shadow-xl">
+
+        <h1 class="text-3xl font-bold">
+            Animation
+        </h1>
+
+    </div>
+
+</body>
+
+</html>

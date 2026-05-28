@@ -1,0 +1,19 @@
+body{
+    background-color:lightblue;
+}
+
+@media(max-width:768px){
+
+    body{
+        background-color:lightgreen;
+    }
+
+}
+
+@media(min-width:1024px){
+
+    body{
+        background-color:lightcoral;
+    }
+
+}
