@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>DOM Basics</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="h-screen flex justify-center items-center">
+
+    <div class="text-center">
+
+        <h1 
+        id="heading"
+        class="text-5xl font-bold"
+        >
+            Hello
+        </h1>
+
+        <button 
+        id="btn"
+        class="mt-10 bg-blue-500 text-white px-5 py-3 rounded-lg w-fit mx-auto"
+        >
+            Change Text
+        </button>
+
+    </div>
+
+    <script>
+
+        let heading = document.getElementById("heading");
+
+        let button = document.getElementById("btn");
+
+        button.addEventListener("click",()=>{
+
+            heading.textContent = "DOM Updated";
+
+            heading.style.color = "red";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Counter</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="text-center">
+
+    <!-- Heading -->
+    <h1 class="text-5xl font-bold mb-6">
+      Counter
+    </h1>
+
+    <!-- Counter Value -->
+    <p id="count" class="text-7xl font-bold text-black mb-8">
+      0
+    </p>
+
+    <!-- Buttons -->
+    <div class="space-x-3">
+      <button id="des"
+        class="border border-black px-4 py-2 rounded hover:bg-gray-300">
+        DECREASE
+      </button>
+
+      <button id="res"
+        class="border border-black px-4 py-2 rounded hover:bg-gray-300">
+        RESET
+      </button>
+
+      <button id="ins"
+        class="border border-black px-4 py-2 rounded hover:bg-gray-300">
+        INCREASE
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+
+    // Selecting Elements
+    var count = document.getElementById("count");
+    var des = document.getElementById("des");
+    var res = document.getElementById("res");
+    var ins = document.getElementById("ins");
+
+    // Function to change color
+    function updateColor() {
+
+      let value = parseInt(count.textContent);
+
+      if (value > 0) {
+        count.classList.remove("text-red-600", "text-black");
+        count.classList.add("text-green-600");
+      }
+
+      else if (value < 0) {
+        count.classList.remove("text-green-600", "text-black");
+        count.classList.add("text-red-600");
+      }
+
+      else {
+        count.classList.remove("text-green-600", "text-red-600");
+        count.classList.add("text-black");
+      }
+    }
+
+    // Increase
+    ins.addEventListener("click", () => {
+      count.textContent = parseInt(count.textContent) + 1;
+      updateColor();
+    });
+
+    // Decrease
+    des.addEventListener("click", () => {
+      count.textContent = parseInt(count.textContent) - 1;
+      updateColor();
+    });
+
+    // Reset
+    res.addEventListener("click", () => {
+      count.textContent = 0;
+      updateColor();
+    });
+
+  </script>
+
+</body>
+</html>
