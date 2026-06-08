@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Form Validation</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="h-screen flex justify-center items-center bg-gray-100">
+
+    <form
+    id="loginForm"
+    class="bg-white p-8 rounded-xl shadow-lg w-[400px]"
+    >
+
+        <h1 class="text-3xl font-bold mb-5">
+            Login Form
+        </h1>
+
+        <input
+        id="email"
+        type="email"
+        placeholder="Enter Email"
+        required
+        class="w-full border p-3 mb-4 rounded"
+        >
+
+        <input
+        id="password"
+        type="password"
+        placeholder="Enter Password"
+        minlength="8"
+        required
+        class="w-full border p-3 mb-4 rounded"
+        >
+
+        <button
+        type="submit"
+        class="bg-blue-500 text-white px-5 py-3 rounded w-full"
+        >
+            Login
+        </button>
+
+    </form>
+
+    <script>
+
+        let form = document.getElementById("loginForm");
+
+        form.addEventListener("submit",(event)=>{
+
+            event.preventDefault();
+
+            alert("Form Submitted Successfully");
+
+        });
+
+    </script>
+
+</body>
+
+</html>
